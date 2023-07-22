@@ -1,0 +1,39 @@
+.woocommerce-product-rating .star-rating {
+    @include center-block;
+}
+.wc-bookings-date-picker {
+    // Calendar header
+    .ui-datepicker-header {
+        background-color: $color__text-main;
+        background-image: none;
+    }
+
+    .ui-datepicker {
+        // Calendar next and previous buttons
+        .ui-datepicker-next {
+            height: 2.6em;
+            right: 0;
+            background: #696969;
+        }
+
+        .ui-datepicker-prev {
+            height: 2.6em;
+            background: #696969;
+            left: 0;
+        }
+
+        // Bookable calendar slots
+        td.bookable a {
+            background-color: $color__text-main !important;
+            &:hover {
+                background-color: #bdbdbd !important;
+                color: #fff;
+            }
+        }
+
+        // Selected calendar slots
+        td.bookable-range .ui-state-default {
+            background-color: #bdbdbd !important;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+.page-id-37 {
+    .site-main{
+        &
+        h1,h2,h3,h4,h5,h6{
+            text-align: center;
+        }
+        svg {
+            margin-right: 1rem;
+        }
+        p{
+            display: inline-block;
+            margin: 0;
+        }
+        .clinic-info {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    }
+        .contact-phone,
+        .contact-email,
+        .contact-hours{
+            margin: 1rem auto;
+            display: inline-flex;
+            place-content: center;
+            place-items: center;                   
+        }
+        .contact-email-link{
+            text-underline-offset: 3px;
+        }
+        .contact-hours-container {
+            margin: 1rem 0 1rem;
+            place-content: center;
+        
+        & p{
+            margin: 0;
+        }
+        }
+        .contact-address {
+            text-align: center;
+        }   
+        .contact-map{
+            .acf-map{
+              width: 100%;
+                height: 400px;
+                border: #ccc solid 1px;
+                margin: 20px 0; 
+                & img{
+                    max-width: inherit !important;
+                }
+            }
+        }
+        .post-37{
+            .entry-content{
+                
+                .gfield_description{
+                    text-align: left;
+                }
+            }
+        }
+        .gform_footer{
+            justify-content: flex-end;
+        }
+
+        .gform_confirmation_message{
+
+            text-align: center;
+            font-size: 1rem;
+            margin: 5rem 0 1rem;
+        }
+        
+        #gform_fields_1 {
+            .gfield_required{
+                color:red;
+                opacity: 1;
+            }
+        }   
+}

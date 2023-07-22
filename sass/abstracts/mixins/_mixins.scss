@@ -1,0 +1,137 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) - calc(($columns__margin * ($numberColumns - 1)) / $numberColumns);
+}
+
+// CTA Button
+// here's the template
+  // <div class="button-container">
+	// 	<a class="link-button" href="">
+  //    <span>input title here</span>
+  //  </a>
+	// </div>
+
+@mixin link-button {
+  background: none;
+  padding: 1.5rem 2rem;
+  border: none;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  font-size: .8rem;
+  cursor: pointer;
+
+  span {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: .8rem;
+    letter-spacing: 2.4px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &::before {
+    content: '';
+    background: $color__text-main;
+    transition: transform 0.3s cubic-bezier(0.2,1,0.7,1);
+  }
+
+  &:hover::before {
+    transform: scale3d(0.9, 0.8, 1);
+  }
+
+  &::after {
+    content: '';
+    border: 1px solid $color__text-main;
+    transition: transform 0.3s cubic-bezier(0.2,1,0.7,1);
+    border-radius: 0px;
+    transform: scale3d(0.85, 0.65, 1);
+  }
+
+  &:hover::after {
+    transform: scale3d(1,1,1);
+  }
+
+}
+
+// More Info Button
+// Here's the template
+// <div class="">
+//   <a href="">
+//     More Info<svg aria-hidden="true" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+//       <path d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z" fill-rule="nonzero"/>
+//     </svg>
+//   </a>
+// </div>
+@mixin more-info-button {
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: .2rem;
+    border-bottom: 1px solid $color__text-main;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 100%;
+      height: 1px;
+      background-color: $color__text-main;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+
+    svg {
+      vertical-align: sub;
+      margin-left: .2rem;
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }
+}
+
+// Light Gray Background
+// Template:
+// <section class="home-intro" id="home-intro">
+//   (content)
+// </section>
+
+@mixin gray-bg {
+  position: relative;
+  &::before {
+      content:"";
+      background-color: $color__background-gray;
+      width: 2500px;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+      top:0;
+      left: 0;
+      @media(min-width: 62.5em) {
+          left: -30vw;
+      }
+  }
+}

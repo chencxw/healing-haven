@@ -1,0 +1,32 @@
+.site {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.site-main {
+	overflow: hidden;
+	padding: 0 1.5rem;
+}
+
+@media screen and (min-width: 50em) {
+	.site {
+		display: grid;
+		grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+		grid-template-areas:
+			"header header header"
+			". main ."
+			"footer footer footer";
+	}
+
+	.site-header {
+		grid-area: header;
+	}
+
+	.site-main {
+		grid-area: main;
+	}
+
+	.site-footer {
+		grid-area: footer;
+	}
+}

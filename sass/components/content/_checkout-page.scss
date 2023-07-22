@@ -1,0 +1,189 @@
+.page-id-18 {
+  .woocommerce-checkout-review-order-table tbody td.product-name {
+    font-family: $font__header;
+    font-weight: 700;
+
+    dl.variation {
+      font-family: $font__body;
+
+      dd {
+          font-weight: 400;
+      }
+    }
+  }
+
+  .payment_box {
+    .wc-payment-form + fieldset {
+      border: none;
+    }
+  }
+
+  button#place_order {
+    @include center-block;
+  }   
+
+  .input-text {
+    height: 2.25rem;
+    width: 100%;
+  }
+
+  .woocommerce-checkout-review-order-table {
+    border-collapse: collapse;
+
+    thead {
+      background-color: $color__text-main;
+      color: $color__background-body;
+    }
+
+    th {
+      padding: .5rem;
+      text-align: left;
+    }
+
+    tbody {
+      td {
+        padding-top: 1.5rem;
+      }
+    }
+
+    .order-total {
+      border: 1px solid $color__text-main;
+    }
+
+    @media (min-width: 50em) {
+      tbody {
+        dl {
+          display: grid;
+          grid-template-columns: 1fr 1fr 2fr;
+          grid-template-rows: auto;
+          justify-content: space-evenly;
+        }
+
+        dd {
+          grid-row: 2;
+          margin: 0 .5rem 0 0;
+        }
+      }
+    }
+  }
+
+  .woocommerce-checkout-payment {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .payment_box {
+    .wc-payment-form + fieldset {
+      border: none;
+    }
+
+    fieldset {
+      border: 1px solid $color__text-main;
+      margin: 1rem 0;
+    }
+  }
+}
+
+// order received section
+.page-id-18 {
+  .woocommerce-order {
+    .woocommerce-notice,
+    p:nth-child(3):not(.woocommerce-customer-details--phone) {
+      text-align: center;
+    }
+  }
+
+  .woocommerce-order-overview {
+    max-width: 20rem;
+    margin: 0 auto 3.5rem;
+    list-style: none;
+    padding: 0;
+  }
+		
+  .woocommerce-order-details {
+    h2 {
+      text-align: center;
+      margin: 5rem 0 3rem;
+    }
+
+    .woocommerce-table--order-details {
+      border-collapse: collapse;
+    }
+
+    .wc-booking-summary {
+      border: none;
+
+      .wc-booking-summary-list {
+        padding: 0;
+      }
+    }
+
+    .status-paid,
+    .status-unpaid {
+      display: none;
+    }
+
+    thead {
+      tr {
+        th {
+          border-bottom: 1px solid $color__border;
+          padding-bottom: 1.5rem;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          text-align: center;
+          padding-top: 1.5rem;
+          border-bottom: 1px solid $color__border;
+
+          a {
+            font-family: $font__header;
+            font-weight: bolder;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+
+    tfoot {
+      th {
+        text-align: right;
+        padding-top: 1.5rem;
+      }
+
+      td {
+        text-align: center;
+        padding-top: 1.5rem;
+      }
+    }
+  }
+
+  .woocommerce-customer-details {
+    h2 {
+      text-align: center;
+      margin: 5rem 0 3rem;
+    }
+
+    address {
+      max-width: 20rem;
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: 50em) {
+    .woocommerce-customer-details {
+      address {
+        max-width: 100rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&display=swap>);
+@import url(https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap);
+
+// stylelint-disable value-keyword-case
+$font__main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font__header: 'Playfair Display', 'Times New Roman';
+$font__body: 'Manrope', 'sans-serif';
+// stylelint-enable value-keyword-case
+$font__code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;

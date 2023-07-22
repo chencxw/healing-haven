@@ -1,0 +1,70 @@
+.page-id-32{
+    .site-header{
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+}
+
+.site-header {
+    background-color: transparent;
+    position: relative;
+    border-bottom: 1.5px solid #C1C1C1;
+    z-index: 10000;
+    height: 63px;
+}
+
+body.home.admin-bar .site-header {
+    top: 46px;
+}
+
+@media screen and (min-width: 48.9em) {
+    body.home.admin-bar .site-header {
+        top: 32px;
+    }
+}
+
+.site-branding {
+    width: 3rem;
+    max-height: 100%;
+    padding: 0.5rem 0;
+    margin: 0 1rem;
+
+    p {
+        margin: 0;
+    }
+
+    a{
+        position: relative;
+        z-index: 7;
+    }
+}
+
+.home .site-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    color: #fff;
+    border-color: #fff;
+    &.toggled {
+        background-color: #eeeeee;
+        border-color: $color__text-header;
+        .menu-toggle svg{
+            fill: $color__text-header;
+        }
+    }
+}
+
+@media screen and (min-width: 59.375em) {
+    .site-header {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1rem;
+        padding: 0rem 2rem;
+    }
+
+    .site-branding {
+        grid-column: 1/2;
+    }
+}

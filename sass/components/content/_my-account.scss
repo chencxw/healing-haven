@@ -1,0 +1,59 @@
+.page-id-19{
+    .site-main{
+        .post-19{
+            .entry-content{
+                .woocommerce{        
+                    .woocommerce-MyAccount-content{
+                        min-height: 450px;
+                        .woocommerce-info{
+                            background-color: white;
+                            text-indent: 10px;
+                        }
+                    }                   
+                }
+            }
+        }
+    }
+    label{
+        font-weight: 700;
+        // padding-left: 16px;
+        display: block;
+    }
+    input[type=text],
+    input[type=password],
+    input[type=email]{
+        max-width: 350px;
+        width: 100%;
+    }
+
+    input[name=rememberme] {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.woocommerce-edit-account{
+    .woocommerce-EditAccountForm{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    text-align:"right";
+    .form-row-first,
+    .form-row-last,
+    .form-email{
+        margin-left: 1rem;
+    }
+}
+
+
+
+#customer_login{
+    @media (min-width: 50rem) {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .u-column2{
+        grid-column: 2/3;
+    }
+    }
+}

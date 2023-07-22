@@ -1,0 +1,29 @@
+.therapist-item {
+  text-align: center;
+  margin: 3rem 1rem;
+
+  span {
+    font-family: $font__header;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  p {
+    margin: .5rem;
+  }
+
+  .therapist-more-info {
+    @include more-info-button;
+  }
+}
+
+.therapists-section {
+  @media (min-width: 50em) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 87.5rem;
+    margin: 0 auto;
+  }
+}
+

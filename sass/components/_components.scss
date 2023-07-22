@@ -1,0 +1,49 @@
+/* Header
+--------------------------------------------- */
+@import "header/header";
+
+/* Navigation
+--------------------------------------------- */
+@import "navigation/navigation";
+@import "navigation/services-nav";
+@import "navigation/account-nav";
+
+/* Posts and pages
+--------------------------------------------- */
+@import "content/posts-and-pages";
+@import "content/home-page";
+@import "content/about-page";
+@import "content/services-page";
+@import "content/contact-page";
+@import "content/therapists-page";
+@import "content/single-therapist";
+@import "content/single-product";
+@import "content/my-account";
+@import "content/cart-page";
+@import "content/booking-calendar";
+@import "content/404-page";
+@import "content/checkout-page";
+
+/* Comments
+--------------------------------------------- */
+@import "comments/comments";
+
+/* Widgets
+--------------------------------------------- */
+@import "widgets/widgets";
+
+/* Media
+--------------------------------------------- */
+@import "media/media";
+
+/* Captions
+--------------------------------------------- */
+@import "media/captions";
+
+/* Galleries
+--------------------------------------------- */
+@import "media/galleries";
+
+/* footer
+--------------------------------------------- */
+@import "footer/footer";

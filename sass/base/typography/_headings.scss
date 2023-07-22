@@ -1,0 +1,23 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	color: $color__text-header;
+	font-family: $font__header;
+	letter-spacing: normal;
+}
+
+h1 {
+	font-size: 3rem;
+	text-align: center;
+	margin: 3rem 0;
+}
+
+@media (min-width: 50em) {
+	h1 {
+		font-size: 4rem;
+	}
+}

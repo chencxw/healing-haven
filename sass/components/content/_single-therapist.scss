@@ -1,0 +1,155 @@
+.single-hhm-therapists {
+    overflow-x: clip;
+
+    .site-main {
+        overflow: visible;
+    }
+}
+
+.hhm-therapists {
+    max-width: 50rem;
+    margin: 0 auto;
+
+    h2{
+        text-align: center;
+    }
+
+    .therapist-availability-calendar {
+        margin-top: 3rem;
+
+        h2 {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .wc-bookings-availability-item-information {
+        margin: 0;
+    }
+    
+    .wc-bookings-availability-date,
+    .wc-bookings-availability-item-subheader span {
+        color: $color__text-main;
+        font-size: 1rem;
+    }
+    
+    .wc-bookings-availability-event-table {
+        padding: 0;
+    }
+    
+    .wc-bookings-availability-load-more-listings {
+        margin-top: 3rem;
+    }
+    
+    @media (max-width: 50rem) {
+        .wc-bookings-availability-item div{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }  
+    }
+
+    @media (min-width: 60rem) {
+        display: grid;
+        max-width: none;
+        grid-template-columns: 1fr 1fr;
+
+        .entry-header{
+            grid-column: 1/3;
+        }
+
+        p{
+            grid-column: 2/3;
+            grid-row: 2/4;
+        }
+
+        & > p {
+            align-self: center;
+            padding-bottom: 6rem;
+            padding-left: 3rem;
+        }
+
+        .therapist-details{
+            margin: 0 0 0 3rem;
+        }
+
+        .therapist-testimonial{
+            
+            grid-column: 1/3;
+            width: 100%;
+            justify-self: center;
+            margin: 3rem 0 0;
+        }
+
+        .therapist-availability-calendar{
+            grid-column: 1/3;
+        }
+
+        .button-container{
+            grid-column: 1/3;
+        }
+
+    }
+
+    // SLIDER
+    .slider-container{
+        width: 100%;
+        
+        .swiper{
+            width: 80%;
+            height: fit-content;
+        }
+
+        .swiper-slide div{
+            width: 100%;
+            
+        }
+    }
+
+    .button-container{
+        margin: 4rem 0;
+    }
+
+    img{
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.therapist-details {
+
+    &>div{
+        display: flex;
+        align-items: baseline;
+        margin: 1rem 0 0;
+    }
+
+    h3{
+        margin: 0 0.5rem 0 0;
+    }
+
+    p{
+        margin: 0 0.5rem 0 0;
+    }
+
+    a{
+        margin: 0 0.5rem 0 0;
+        display: block;
+    }
+}
+
+.therapist-testimonial {
+    @include gray-bg;
+
+    margin: 1rem 0;
+    padding: 4rem 0;
+    
+
+    &::before {
+        left: -25vw;
+        @media(min-width: 62.5em) {
+            left: -40vw;
+        }
+    }
+}

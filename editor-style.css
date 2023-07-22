@@ -1,0 +1,64 @@
+body,
+button,
+input,
+select,
+textarea {
+    color: #313131;
+    font-family: 'Manrope', 'sans-serif';
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1a1a1a;
+  font-family: 'Playfair Display', 'Times New Roman';
+  margin: 2rem 0;
+  line-height: 3rem;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+a {
+  color: #313131;
+  text-decoration: underline;
+}
+
+blockquote {
+  border-left: 2px solid #c1c1c1;
+  padding-left: 1.5rem;
+  font-style: italic;
+}
+
+ul {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+ol {
+  list-style-type: decimal;
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+li {
+  padding: 1rem .5rem;
+}
+
+.button {
+  display: inline-block;
+  padding: .5rem 2rem;
+  background-color: #313131;
+  color: #ffffff;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1px solid #313131;
+  border-radius: 4px;
+}

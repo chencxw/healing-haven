@@ -1,0 +1,191 @@
+.woocommerce-cart .site-main {
+    min-height: 80vh;
+
+    .woocommerce-message {
+        margin-bottom: 1rem;
+        border: 2px dotted $color__border;
+        padding: 1.5rem;
+    }
+}
+
+.woocommerce-cart-form {
+    border-bottom: 1px solid $color__border;
+
+    thead {
+        border-bottom: 1px solid $color__border;
+        th {
+            padding-bottom: 1rem
+        }
+    }
+}
+
+.return-to-shop {
+    @include link-button;
+    a {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1rem;
+        position: relative;
+        z-index: 100;
+        text-decoration: none;
+    }
+    margin: 1rem auto;
+    display:block;
+    width: fit-content;
+}
+
+.product-remove {
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
+    a {
+        text-decoration: none;
+    }
+}
+
+.product-quantity,
+.product-subtotal {
+    display: none;
+}
+
+table.woocommerce-cart-form__contents {
+    border-collapse: collapse;
+    tr {
+        td.product-quantity,
+        td.product-subtotal {
+            display: none;
+        }
+        td.product-thumbnail {
+            text-align: center;
+        }
+        td.product-name {
+            text-align: center;
+            a {
+                font-family: $font__header;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 1.2rem;
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+        td.product-thumbnail::before {
+            display: none;
+        }
+        td.product-price {
+            margin: 1.5rem 0rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        button[name=update_cart] {
+            display: none;
+        }
+
+        &.order-total {
+            font-family: 'Playfair Display', 'Times New Roman';
+            td::before {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .variation {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: 1rem;
+    }
+
+    dt, dd {
+        width: 45%;
+        text-align: left;
+    }
+
+    dd {
+        margin: 0rem;
+        p {
+            margin: 0;
+        }
+    }
+
+    .cart_item {
+        border-bottom: 1px solid $color__border;
+    }
+
+    .coupon {
+        text-align: left;
+        padding: 2rem 0rem 1rem;
+        display: flex;
+        justify-content: center;
+
+        input[name=coupon_code] {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        button[name=apply_coupon] {
+            padding: 0.6rem 1.5rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            background: $color__text-main;
+            border: none;
+            color: #fff;
+            border-radius: 0;
+            letter-spacing: 2.4px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            border: 1px solid #fff;
+            &:hover {
+                color: $color__text-main;
+                border: 1px solid $color__text-main;
+            }
+        }
+    }
+}
+
+.woocommerce-cart .checkout-button {
+    @include link-button;
+    &::before {
+        z-index: -1;
+    }
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    width: fit-content;
+    margin-top: 4rem;
+    @include center-block;
+}
+
+@media screen and (min-width: 48em) {
+    table.woocommerce-cart-form__contents {
+        tr {
+            th, td {
+                padding: 1rem;
+            }
+            th {
+                font-family: 'Playfiar Display', 'Times New Roman';
+                font-size: 1.5rem;
+            }
+            td.product-name {
+                text-align: left;
+            }
+            td.product-quantity {
+                display: none;
+            }
+        }
+    }
+
+    .cart_totals {
+        max-width: 600px;
+        @include center-block;
+        table.shop_table_responsive {
+            tr td {
+                text-align: right;
+            }
+        }
+    }
+}
+
