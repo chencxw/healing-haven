@@ -101,3 +101,7 @@ package-lock.json
 *.map
 style.css
 woocommerce.css
+
+# Ignore API key file #
+#####################
+keys.php

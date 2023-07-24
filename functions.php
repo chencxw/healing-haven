@@ -164,18 +164,21 @@ function healing_haven_scripts() {
 
 	// Enqueue map on contact page
 	if (is_page('contact') || is_page('edit-contact')) {
-	wp_enqueue_script(
-		'google-maps', 
-		'https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=Function.prototype', array(), 
-		null, 
-		true);
-		
-    wp_enqueue_script(
-		'customMap', 
-		get_template_directory_uri() . '/js/map.js', 
-		array('jquery'), 
-		'5.8.6', 
-		true);
+		include_once 'keys.php';
+		$api_key = MY_API_KEY;
+
+		wp_enqueue_script(
+			'google-maps', 
+			'https://maps.googleapis.com/maps/api/js?key='.$api_key.'&callback=Function.prototype', array(), 
+			null, 
+			true);
+			
+		wp_enqueue_script(
+			'customMap', 
+			get_template_directory_uri() . '/js/map.js', 
+			array('jquery'), 
+			'5.8.6', 
+			true);
 	}
 
 	// slider - swiper files
